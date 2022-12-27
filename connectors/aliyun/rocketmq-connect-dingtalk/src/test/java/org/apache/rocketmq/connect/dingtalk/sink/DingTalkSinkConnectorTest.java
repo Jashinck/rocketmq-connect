@@ -26,13 +26,13 @@ public class DingTalkSinkConnectorTest {
         DingTalkSinkTask dingTalkSinkTask = new DingTalkSinkTask();
         KeyValue keyValue = new DefaultKeyValue();
         // Replace it with your own robot webhook.
-        keyValue.put("webHook", "https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx");
-        keyValue.put("secretKey", "Replace it with your own robot secretKey.");
+        keyValue.put("webHook", "https://oapi.dingtalk.com/robot/send?access_token=7f78aa4734ea9bd245984e47b6764ccb950b4292e4f6f9424dff92909f485f16");
+        keyValue.put("secretKey", "SEC8a898c9df7b6415090a8f1341d9eed000c815a89f301f2de87302a1e802dbd69");
         dingTalkSinkTask.init(keyValue);
         Map<String, Object> map = new HashMap<>();
         map.put("msgtype", "text");
         Map<String, String> map1 = new HashMap<>();
-        map1.put("content", "1111");
+        map1.put("content", "你是风儿，我是沙");
         map.put("text", map1);
         List<ConnectRecord> connectRecordList = new ArrayList<>();
         ConnectRecord connectRecord = new ConnectRecord(null, null, System.currentTimeMillis());
